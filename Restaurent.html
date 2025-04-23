@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Restaurant Table Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .restaurant-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .restaurant {
+            width: 300px;
+            padding: 10px;
+            background: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .restaurant img {
+            width: 100%;
+            border-radius: 50px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: #eee;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        img.menu-img {
+            width: 30px;
+            height: 50px;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="restaurant-selection">
+        <h2>Select a Restaurant</h2>
+        <div class="restaurant-list">
+            <div class="restaurant" onclick="selectRestaurant('Madhuram Resto')">
+                <img src="madhuramresto.jpg" alt="Madhuram Resto">
+                <p>Madhuram Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Village Restaurant')">
+                <img src="villageresto.jpg" alt="Village Restaurant">
+                <p>Village Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Ayodhya Restaurant')">
+                <img src="ayodhyaresto.jpg" alt="Ayodhya Restaurant">
+                <p>Ayodhya Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Rajasthani Restaurant')">
+                <img src="rajasresto.jpg" alt="Rajasthani Restaurant">
+                <p>Rajasthani Restaurant</p>
+            </div>
+			<div class="restaurant" onclick="selectRestaurant('Madhuram Resto')">
+                <img src="madhuramresto.jpg" alt="Madhuram Resto">
+                <p>Madhuram Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Village Restaurant')">
+                <img src="villageresto.jpg" alt="Village Restaurant">
+                <p>Village Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Ayodhya Restaurant')">
+                <img src="ayodhyaresto.jpg" alt="Ayodhya Restaurant">
+                <p>Ayodhya Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Rajasthani Restaurant')">
+                <img src="rajasresto.jpg" alt="Rajasthani Restaurant">
+                <p>Rajasthani Restaurant</p>
+            </div>
+			<div class="restaurant" onclick="selectRestaurant('Madhuram Resto')">
+                <img src="madhuramresto.jpg" alt="Madhuram Resto">
+                <p>Madhuram Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Village Restaurant')">
+                <img src="villageresto.jpg" alt="Village Restaurant">
+                <p>Village Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Ayodhya Restaurant')">
+                <img src="ayodhyaresto.jpg" alt="Ayodhya Restaurant">
+                <p>Ayodhya Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Rajasthani Restaurant')">
+                <img src="rajasresto.jpg" alt="Rajasthani Restaurant">
+                <p>Rajasthani Restaurant</p>
+            </div>
+			<div class="restaurant" onclick="selectRestaurant('Madhuram Resto')">
+                <img src="madhuramresto.jpg" alt="Madhuram Resto">
+                <p>Madhuram Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Village Restaurant')">
+                <img src="villageresto.jpg" alt="Village Restaurant">
+                <p>Village Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Ayodhya Restaurant')">
+                <img src="ayodhyaresto.jpg" alt="Ayodhya Restaurant">
+                <p>Ayodhya Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Rajasthani Restaurant')">
+                <img src="rajasresto.jpg" alt="Rajasthani Restaurant">
+                <p>Rajasthani Restaurant</p>
+            </div>
+			<div class="restaurant" onclick="selectRestaurant('Madhuram Resto')">
+                <img src="madhuramresto.jpg" alt="Madhuram Resto">
+                <p>Madhuram Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Village Restaurant')">
+                <img src="villageresto.jpg" alt="Village Restaurant">
+                <p>Village Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Ayodhya Restaurant')">
+                <img src="ayodhyaresto.jpg" alt="Ayodhya Restaurant">
+                <p>Ayodhya Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Rajasthani Restaurant')">
+                <img src="rajasresto.jpg" alt="Rajasthani Restaurant">
+                <p>Rajasthani Restaurant</p>
+            </div>
+			<div class="restaurant" onclick="selectRestaurant('Madhuram Resto')">
+                <img src="madhuramresto.jpg" alt="Madhuram Resto">
+                <p>Madhuram Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Village Restaurant')">
+                <img src="villageresto.jpg" alt="Village Restaurant">
+                <p>Village Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Ayodhya Restaurant')">
+                <img src="ayodhyaresto.jpg" alt="Ayodhya Restaurant">
+                <p>Ayodhya Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Rajasthani Restaurant')">
+                <img src="rajasresto.jpg" alt="Rajasthani Restaurant">
+                <p>Rajasthani Restaurant</p>
+            </div><div class="restaurant" onclick="selectRestaurant('Madhuram Resto')">
+                <img src="madhuramresto.jpg" alt="Madhuram Resto">
+                <p>Madhuram Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Village Restaurant')">
+                <img src="villageresto.jpg" alt="Village Restaurant">
+                <p>Village Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Ayodhya Restaurant')">
+                <img src="ayodhyaresto.jpg" alt="Ayodhya Restaurant">
+                <p>Ayodhya Restaurant</p>
+            </div>
+            <div class="restaurant" onclick="selectRestaurant('Rajasthani Restaurant')">
+                <img src="rajasresto.jpg" alt="Rajasthani Restaurant">
+                <p>Rajasthani Restaurant</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container hidden" id="booking-form">
+        <h2>Customer Table Booking</h2>
+        <p id="selected-restaurant"></p>
+        <label for="customer-name">Name:</label>
+        <input type="text" id="customer-name" required>
+        <br><br>
+        <label for="customer-time">Time:</label>
+        <input type="time" id="customer-time" required>
+        <br><br>
+        <button onclick="checkIn()">Check In</button>
+    </div>
+
+    <div class="container hidden" id="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li>Pizza - Rs. 399 <img class="menu-img" src="pizza.jpg" alt="Pizza"></li>
+            <li>Burger - Rs. 69 <img class="menu-img" src="burger.jpg" alt="Burger"></li>
+            <li>Pasta - Rs. 59 <img class="menu-img" src="pasta.jpg" alt="Pasta"></li>
+            <li>Thali - Rs. 299 <img class="menu-img" src="thali.jpg" alt="Salad"></li>
+            <li>matar paneer - Rs. 259 <img class="menu-img" src="matarpaneer.jpg" alt="Steak"></li>
+			<li>Pizza - Rs. 399 <img class="menu-img" src="pizza.jpg" alt="Pizza"></li>
+            <li>Burger - Rs. 69 <img class="menu-img" src="burger.jpg" alt="Burger"></li>
+            <li>Pasta - Rs. 59 <img class="menu-img" src="pasta.jpg" alt="Pasta"></li>
+            <li>Thali - Rs. 299 <img class="menu-img" src="thali.jpg" alt="Salad"></li>
+            <li>matar paneer - Rs. 259 <img class="menu-img" src="matarpaneer.jpg" alt="Steak"></li>
+			<li>Pizza - Rs. 399 <img class="menu-img" src="pizza.jpg" alt="Pizza"></li>
+            <li>Burger - Rs. 69 <img class="menu-img" src="burger.jpg" alt="Burger"></li>
+            <li>Pasta - Rs. 59 <img class="menu-img" src="pasta.jpg" alt="Pasta"></li>
+            <li>Thali - Rs. 299 <img class="menu-img" src="thali.jpg" alt="Salad"></li>
+            <li>matar paneer - Rs. 259 <img class="menu-img" src="matarpaneer.jpg" alt="Steak"></li>
+			<li>Pizza - Rs. 399 <img class="menu-img" src="pizza.jpg" alt="Pizza"></li>
+            <li>Burger - Rs. 69 <img class="menu-img" src="burger.jpg" alt="Burger"></li>
+            <li>Pasta - Rs. 59 <img class="menu-img" src="pasta.jpg" alt="Pasta"></li>
+            <li>Thali - Rs. 299 <img class="menu-img" src="thali.jpg" alt="Salad"></li>
+            <li>matar paneer - Rs. 259 <img class="menu-img" src="matarpaneer.jpg" alt="Steak"></li>
+        </ul>
+    </div>
+
+    <script>
+        function selectRestaurant(restaurantName) {
+            document.getElementById("restaurant-selection").classList.add("hidden");
+            document.getElementById("booking-form").classList.remove("hidden");
+            document.getElementById("selected-restaurant").innerText = "You selected: " + restaurantName;
+        }
+
+        function checkIn() {
+            var name = document.getElementById("customer-name").value;
+            var time = document.getElementById("customer-time").value;
+            if (name && time) {
+                document.getElementById("booking-form").classList.add("hidden");
+                document.getElementById("menu").classList.remove("hidden");
+            } else {
+                alert("Please fill in all fields!");
+            }
+        }
+    </script>
+</body>
+</html>

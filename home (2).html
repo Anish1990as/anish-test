@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJT - Travel & Booking Services</title>
+    <style>
+    body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #ff4d4d;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background: url('hotel-banner.jpg') no-repeat center center/cover;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+        .search-box {
+            text-align: center;
+            padding: 20px;
+        }
+        .search-box input {
+            padding: 10px;
+            width: 300px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-box button {
+            padding: 10px 15px;
+            background: #ff4d4d;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .search-box button:hover {
+            background: #cc0000;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 40px;
+            background: #f8f8f8;
+        }
+        .service-box {
+            text-align: center;
+            width: 200px;
+            margin: 20px;
+        }
+        .service-box img {
+            width: 100px;
+            height: 100px;
+        }
+        .popular-cities {
+            text-align: center;
+            padding: 40px;
+            background: #fff;
+        }
+        .city-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .city {
+            margin: 30px;
+            padding: 10px 20px;
+            background: #ff4d4d;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .city:hover {
+            background: #cc0000;
+        }
+        .footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">EJP</div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Hotels</a>
+            <a href="#">Car Rentals</a>
+            <a href="#">Restaurants</a>
+            <a href="#">Bike Rentals</a>
+            <a href="#">Trip Planning</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <div class="hero">welcome to Eco Journey Planning</div>
+    
+    <div class="search-box">
+        <input type="text" id="location" placeholder="Enter your location...">
+        <button onclick="getLocation()">Use My Location</button>
+        <button>Search</button>
+    </div>
+    
+	<div class="popular-cities">
+        <h2>Travel all india Cities</h2>
+        <div class="city-list">
+            <div class="city">Ayodhya</div>
+            <div class="city">Varanasi</div>
+            <div class="city">Noida</div>
+            <div class="city">Lucknow</div>
+            <div class="city">Hydrabad</div>
+            <div class="city">Banglore</div>
+            <div class="city">Mumbai</div>
+            <div class="city">Delhi</div>
+        </div>
+    </div>
+	
+    <div class="services">
+        <div class="service-box">
+            <img src="hotel.png" alt="Hotel Booking">
+            <h3>Hotel Booking</h3>
+            <p>Find top-rated hotels at the best prices.</p>
+        </div>
+        <div class="service-box">
+            <img src="car.png" alt="Car Rentals">
+            <h3>Car Rentals</h3>
+            <p>Book cars easily for your trip.</p>
+        </div>
+        <div class="service-box">
+            <img src="restaurent.png" alt="Restaurant Booking">
+            <h3>Restaurant Booking</h3>
+            <p>Reserve tables at top restaurants.</p>
+        </div>
+        <div class="service-box">
+            <img src="bike.png" alt="Bike Rentals">
+            <h3>Bike Rentals</h3>
+            <p>Rent bikes for quick and easy travel.</p>
+        </div>
+        <div class="service-box">
+            <img src="trip.png" alt="Trip Planning">
+            <h3>Trip Planning</h3>
+            <p>Plan your trips effortlessly.</p>
+        </div>
+    </div>
+    
+    <div class="footer">&copy; 2025 EJT. All rights reserved.</div>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function showPosition(position) {
+            document.getElementById("location").value = "Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude;
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("User denied the request for Geolocation.");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("Location information is unavailable.");
+                    break;
+                case error.TIMEOUT:
+                    alert("The request to get user location timed out.");
+                    break;
+                case error.UNKNOWN_ERROR:
+                    alert("An unknown error occurred.");
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

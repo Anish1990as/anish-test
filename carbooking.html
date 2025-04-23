@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+        .booking-form, .car-list {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 400px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label, input, select, button {
+            margin: 10px 0;
+            padding: 10px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .car {
+            padding: 10px;
+            background: #ddd;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> EJP Car Booking </h1>
+    </header>
+    
+    <section class="booking-form">
+        <h2>Book a Car</h2>
+        <form>
+            <label for="pickup">Pick-up Location:</label>
+            <input type="text" id="pickup" name="pickup" required>
+            
+            <label for="dropoff">Drop-off Location:</label>
+            <input type="text" id="dropoff" name="dropoff" required>
+            
+            <label for="date">Pick-up Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="car">Select Car:</label>
+            <select id="car" name="car">
+                <option value="bmw">BMW</option>
+                <option value="suv">SUV</option>
+                <option value="safari">safari</option>
+            </select>
+            
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+    
+     <section class="car-list">
+            <h2>Available Cars</h2>
+            <div class="car">
+                <img src="suv.jpg" alt="BMW">
+                <h3>BMW</h3>
+                <p>Comfortable and stylish</p>
+            </div>
+            <div class="car">
+                <img src="suv.jpg" alt="SUV">
+                <h3>SUV</h3>
+                <p>Spacious and powerful</p>
+            </div>
+            <div class="car">
+                <img src="suv.jpg" alt="Safari">
+                <h3>Safari</h3>
+                <p>Compact and efficient</p>
+            </div>
+        </section>
+</body>
+</html>

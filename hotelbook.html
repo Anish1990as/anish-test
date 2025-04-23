@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .booking-form, .featured-hotels {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .booking-form h2, .featured-hotels h2 {
+            text-align: center;
+        }
+        .booking-form form {
+            display: grid;
+            gap: 15px;
+        }
+        .booking-form label {
+            font-weight: 600;
+        }
+        .booking-form input, .booking-form button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .booking-form button {
+            background: #333;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .hotel {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 20px 0;
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .hotel img {
+            width: 150px;
+            height: auto;
+            border-radius: 8px;
+        }
+		
+		
+		{ 
+		  margin:0px;
+		  padding:0px;
+		  box-sizing: border-box;
+		  }
+		  .image{
+		     width:100%;
+			 height:30vh;
+			 display:flex;
+			 justify-content:center;
+			 align-items:center;
+			 background-color:#252d5d;
+			 }
+		.image img {
+		     height: 300px;
+			 width: 300px;
+			 border-radius: 50px;
+			 border:10px solid #ffffff
+		  
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hotel Booking</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Hotels</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="booking-form">
+        <h2>Find Your Stay</h2>
+        <form>
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination" placeholder="Enter city or hotel">
+            
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin" name="checkin">
+            
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout" name="checkout">
+            
+            <label for="guests">Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" max="10">
+            
+            <button type="submit">Search</button>
+        </form>
+    </section>
+    
+    <section class="featured-hotels">
+	
+        <h2>Featured Hotels</h2>
+        <div class="hotel">
+            <img src="hotelimg1.png" alt="Luxury Hotel">
+            <div>
+                <h3>Luxury Hotel</h3>
+                <p>Starting from <strong>Rs. 1999/night</strong></p>
+            </div>
+        </div>
+        <div class="hotel">
+            <img src="hotelimg2.png" alt="Seaside Resort">
+            <div>
+                <h3>Seaside Resort</h3>
+                <p>Starting from <strong>Rs. 3999/night</strong></p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+<html>
+	<head>
+	     <title>circle Image Using HTML and CSS</title>
+	     <meta charset ="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>		 
+	<body>
+	    <div class="image">
+		  <img src="hotel.png">
+		  </div>
+		  
+    </body>
+	</html>
